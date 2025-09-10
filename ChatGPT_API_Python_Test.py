@@ -1,7 +1,8 @@
 import os
 from openai import OpenAI
-key = os.getenv('OPENAI_API_KEY')
-client = OpenAI(api_key=key)
+
+# Access the API key
+openai_api_key = os.environ.get('OPENAI_API_KEY')
 
 response = client.responses.create(
     model="gpt-5",
